@@ -1,0 +1,8 @@
+{
+  "name": "cerebro-composio",
+  "description": "Shared Composio dependencies for all cerebro scripts",
+  "private": true,
+  "dependencies": {
+    "@composio/core": "^0.10.0"
+  }
+}

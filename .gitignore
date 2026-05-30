@@ -1,0 +1,7 @@
+node_modules/
+.env
+*.tracker.json
+.tracker.json
+__pycache__/
+*.pyc
+.DS_Store
