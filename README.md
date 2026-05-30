@@ -51,7 +51,14 @@ The heavier-traffic skills (daily-prep, lunch-check, session-review, weekly-revi
 
 ### Composio
 
-Most skills use [Composio](https://composio.dev) to connect Microsoft 365 (Outlook, Calendar, Teams, SharePoint), Google (Gmail, Calendar), and Slack. Install the CLI:
+Most skills use [Composio](https://composio.dev) to connect Microsoft 365 (Outlook, Calendar, Teams, SharePoint), Google (Gmail, Calendar), and Slack.
+
+**Priority order for all skills:**
+
+1. **CLI** (`~/.composio/composio execute …`) — default on any machine where the CLI is installed and authenticated. Fastest, no API key needed.
+2. **SDK / API key** (`COMPOSIO_API_KEY`) — fallback when the CLI is unavailable (e.g. a machine where Composio isn't installed) or when the CLI session has expired. The Node scripts use this path automatically.
+
+#### Install the CLI (primary machine)
 
 ```bash
 # Install CLI
@@ -65,13 +72,17 @@ curl -fsSL https://get.composio.dev | sh
 ~/.composio/composio add slack
 ```
 
-Set the API key (see `.env.example`):
+#### Set the API key (backup / non-CLI machines)
+
+Only required when the CLI is not available or its session has expired. See `.env.example`:
 
 ```bash
 export COMPOSIO_API_KEY=your_key_here
-# Or store in macOS Keychain (scripts check there automatically):
+# Or store in macOS Keychain (the Node scripts check there automatically):
 security add-generic-password -a composio -s COMPOSIO_API_KEY -w "your_key_here"
 ```
+
+#### Node SDK
 
 The `cerebro-composio/` skill is the **single source of truth** for `@composio/core`. Install its dependencies once:
 
