@@ -43,7 +43,7 @@ Each unread message is a task. For every message found:
 3. **Report back** — summarise what you did for each message
 
 **Pattern:** "Here's [email context]. [Instruction]."
-- e.g. *"Here's new information about the away day in Aiguablava. Create / update the plan."*
+- e.g. *"Here's new information about the team offsite. Create / update the plan."*
 
 ## If Inbox is Empty
 
@@ -54,4 +54,4 @@ One line is enough: "Claude inbox clear."
 - **Connected account:** `OUTLOOK_ID` (`YOUR_CLAUDE_INBOX_ACCOUNT_ID`) — same as all other Outlook access
 - **API endpoint:** `/v1.0/users/claude-inbox@company.com/mailFolders/inbox/messages`
 - **Never use** `USER_ID` for this inbox — it requires `OUTLOOK_ID` (delegated access)
-- **Never send** from this inbox — `rhmcerebro` is receive-only
+- **Never send** from this inbox — receive-only

@@ -100,7 +100,7 @@ Process daily note + archive Feb 27 Granola meetings
 Weekend session: home tasks, personal notes, Stuff.md cleanup
 
 - Processed Stuff.md: 6 items cleared (travel, people, tools)
-- New note: Personal/Travel/Barcelona weekend ideas
+- New note: Personal/Travel/weekend ideas
 - Updated Personal/People/[DR3].md with training sponsorship context
 ```
 

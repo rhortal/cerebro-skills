@@ -13,8 +13,8 @@ Posts [USER]'s Open Surgery availability reminder to Slack. Run as part of daily
 
 | Day | Time block | Channels | Timezones shown |
 |---|---|---|---|
-| Friday | 09:30–10:50 | #product-team + #engineering | 🇪🇸 BCN + 🇮🇳 IST |
-| Monday | 14:30–15:50 | #product-team only | 🇪🇸 BCN only |
+| Friday | [TIME_BLOCK] | [YOUR_CHANNEL_1] + [YOUR_CHANNEL_2] | [Your timezone flags] |
+| Monday | [TIME_BLOCK] | [YOUR_CHANNEL_1] only | [Your timezone flag] |
 
 **Never run on other days.**
 
@@ -40,27 +40,27 @@ This handles cancellations, rescheduled blocks, and holidays automatically — i
 
 Use `mcp__claude_ai_Slack__slack_send_message`. Do not use a draft — post directly.
 
-### Friday message (both channels: YOUR_PROD_CHANNEL_ID and YOUR_ENG_CHANNEL_ID)
+### Friday message (both channels: YOUR_CHANNEL_1_ID and YOUR_CHANNEL_2_ID)
 
 ```
-👋 Reminder: every Friday I keep 9:30–10:50 free for Open Surgery.
+👋 Reminder: every Friday I keep [TIME_BLOCK] free for Open Surgery.
 
 It's unstructured time I set aside for you — whether it's something you're stuck on, a decision you want a second opinion on, a project update, or just a chat. No agenda needed.
 
-🇪🇸 [Your City]: 9:30–10:50
-🇮🇳 [Other Office]: 13:00–14:20
+[Your City / timezone]: [TIME_BLOCK]
+[Other office / timezone]: [CONVERTED_TIME] (optional — remove if single-office)
 
 Grab me on a Slack huddle or catch me in person if you're in the office. Just ping me here.
 ```
 
-### Monday message (#product-team only: YOUR_PROD_CHANNEL_ID)
+### Monday message ([YOUR_CHANNEL_1] only: YOUR_CHANNEL_1_ID)
 
 ```
-👋 Reminder: every Monday I keep 14:30–15:50 free for Open Surgery.
+👋 Reminder: every Monday I keep [TIME_BLOCK] free for Open Surgery.
 
 It's unstructured time I set aside for you — whether it's something you're stuck on, a decision you want a second opinion on, a project update, or just a chat. No agenda needed.
 
-🇪🇸 [Your City]: 14:30–15:50
+[Your City / timezone]: [TIME_BLOCK]
 
 Grab me on a Slack huddle or catch me in person if you're in the office. Just ping me here.
 ```
@@ -71,6 +71,6 @@ Grab me on a Slack huddle or catch me in person if you're in the office. Just pi
 
 Return one line summarising what happened:
 
-- `Open Surgery: posted to #product-team + #engineering (Friday, 09:30–10:50).`
-- `Open Surgery: posted to #product-team (Monday, 14:30–15:50).`
+- `Open Surgery: posted to [YOUR_CHANNEL_1] + [YOUR_CHANNEL_2] (Friday, [TIME_BLOCK]).`
+- `Open Surgery: posted to [YOUR_CHANNEL_1] (Monday, [TIME_BLOCK]).`
 - `Open Surgery: not on calendar today — skipped.`

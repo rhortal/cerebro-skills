@@ -221,7 +221,7 @@ Work/
 - Git auto-backup via cerebro-session-review
 
 ### Earliest Available Granola Data
-Granola history starts **Jan 19, 2026** (first confirmed meeting).
+Update this to reflect the date of your first Granola meeting.
 
 ---
 
